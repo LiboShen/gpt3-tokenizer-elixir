@@ -38,6 +38,14 @@ defmodule Gpt3Tokenizer do
 
   @bpe_ranks Enum.zip(@bpe_pairs, 0..(length(@bpe_pairs) - 1)) |> Enum.into(%{})
 
+  @doc """
+  Count the number of tokens in a string.
+
+  ## Examples
+
+      iex> Gpt3Tokenizer.token_count("hello world")
+      2
+  """
   def token_count(text) do
     text
     |> apply_bpe()
@@ -46,6 +54,14 @@ defmodule Gpt3Tokenizer do
     |> Enum.count()
   end
 
+  @doc """
+  Encode a string into a list of tokens.
+
+  ## Examples
+
+      iex> Gpt3Tokenizer.encode("hello world")
+      [31373, 995]
+  """
   def encode(text) do
     text
     |> apply_bpe()
@@ -53,6 +69,14 @@ defmodule Gpt3Tokenizer do
     |> Enum.map(fn token -> Map.get(@encodings, token) end)
   end
 
+  @doc """
+  Decode a list of tokens into a string.
+
+  ## Examples
+
+      iex> Gpt3Tokenizer.decode([31373, 995])
+      "hello world"
+  """
   def decode(tokens) do
     tokens
     |> Enum.map(fn token -> Map.get(@decodings, token) end)
