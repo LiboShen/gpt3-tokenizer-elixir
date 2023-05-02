@@ -1,0 +1,4 @@
+%{
+  "jason": {:hex, :jason, "1.4.0", "e855647bc964a44e2f67df589ccf49105ae039d4179db7f6271dfd3843dc27e6", [:mix], [{:decimal, "~> 1.0 or ~> 2.0", [hex: :decimal, repo: "hexpm", optional: true]}], "hexpm", "79a3791085b2a0f743ca04cec0f7be26443738779d09302e01318f97bdb82121"},
+  "memoize": {:hex, :memoize, "1.4.1", "af853b4bbbf369dd050a9306b6d47d620b76f06935147a67a18751397a952d09", [:mix], [], "hexpm", "83bc06b9ff3815457cdb642ad6f3f02445d0e2948e835d3a92c1979853ef56ee"},
+}
