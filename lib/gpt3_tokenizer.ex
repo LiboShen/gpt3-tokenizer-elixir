@@ -122,7 +122,7 @@ defmodule Gpt3Tokenizer do
 
   defp get_pairs(word) do
     Enum.zip(
-      word |> Enum.slice(0..-2),
+      word |> Enum.slice(0..-2//1),
       word |> Enum.drop(1)
     )
   end
