@@ -22,8 +22,8 @@ defmodule Gpt3Tokenizer.MixProject do
 
   defp deps do
     [
-      {:jason, "~> 1.2"},
-      {:memoize, "~> 1.4"},
+      {:jason, "~> 1.4"},
+      {:memoize, "~> 1.4.3"},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
